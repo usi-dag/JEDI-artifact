@@ -1,0 +1,15 @@
+#!/bin/bash
+
+readonly BASEDIR=$(readlink -f "${BASH_SOURCE[0]%/*}")
+
+arch=$(dpkg --print-architecture)
+
+if [ "$arch" = "amd64" ]; then
+  duckdb_exec=$BASEDIR/duckdb-linux-amd64
+elif [ "$arch" = "arm64" ]; then
+  duckdb_exec=$BASEDIR/duckdb-linux-arm64
+else
+  echo "Unsupported architecture: $arch"
+fi
+
+$duckdb_exec $@
