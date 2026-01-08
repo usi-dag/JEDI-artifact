@@ -1,4 +1,4 @@
-# Artifact for the paper under review submitted at ICSE 2026: 
+# Artifact for the ICSE'26 paper: 
 # JEDI: Java Evaluation of Declarative and Imperative queries - Benchmarking the Java Stream API
 
 ## Main steps to reproduce the experiments:
